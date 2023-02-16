@@ -8,39 +8,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h2 class="text-5xl text-cyan-500 font-bold text-center mt-10">Money Master 💰</h2>
+    <h2 class="text-5xl text-cyan-500 font-bold text-center my-10 ">Money Master 💰</h2>
 
-    <section class="flex justify-between gap-10 p-10 text-center text-xl mx-10">
+    <section class="flex justify-between gap-10 text-center text-xl mx-10">
         <img class="w-full " src="money-master-picture.png" alt="">
 
-        <div class="w-full bg-slate-200">
-            <h3 class="text-xl text-center mt-5 mb-3">Income</h3>
+        <div class="w-full bg-slate-100">
+            <h3 class="text-2xl text-center font-semibold mt-20 mb-3">Income</h3>
             <h3 class="text-md inline">Income: </h3>
-            <input class="bg-slate-400" type="text">
+            <input id="income" class="bg-slate-300" type="text">
 
 
-            <h3 class="text-xl text-center mt-5 mb-3">Expanses:</h3>
+            <h3 class="text-2xl text-center font-semibold mt-12 mb-3">Expanses</h3>
             <p class="text-md inline">Food: </p>
-            <input class="bg-slate-400 mb-3" type="text"> <br>
+            <input id="food-expanses" class="bg-slate-300 mb-5" type="text"> <br>
             <p class="text-md inline">Rent: </p>
-            <input class="bg-slate-400 mb-3" type="text"> <br>
+            <input id="rent-expanses" class="bg-slate-300 mb-5" type="text"> <br>
             <p class="text-md inline">Clothes: </p>
-            <input class="bg-slate-400 mb-3" type="text"> <br>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded-sm mb-5">Calculate</button>
+            <input id="clothes-expanses" class="bg-slate-300 mb-5" type="text"> <br>
+            <button id="expanse-calculator" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded-sm mb-5">Calculate</button>
 
-            <p class="font-bold text-center">Total Expenses: 5500</p>
-            <p class="font-bold text-center">Balance: 4500</p>
+            <p class="font-bold text-center">Total Expenses: <span id="total-expanses">5500</span></p>
+            <p class="font-bold text-center mb-12">Balance: <span id="balance">4500</span></p>
 
             <p class="text-md inline">Save: </p>
-            <input class="bg-slate-400" type="text">
-            <p class="text-md inline"> % </p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm">Calculate</button>
+            <input id="savings" class="bg-slate-300 mb-5 w-1/6" type="text">
+            <p class="text-md inline mx-1"> % </p>
+            <button id="savings-calculator" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded-sm mb-5">Calculate</button>
 
-            <p class="font-bold text-center">Saving Amount: 2000</p>
-            <p class="font-bold text-center">Remaining Balance: 2500</p>
+            <p class="font-bold text-center">Saving Amount: <span id="saving-amount">2000</span></p>
+            <p class="font-bold text-center mb-12">Remaining Balance: <span id="remaining-balance">2500</span></p>
 
         </div>
 
     </section>
+    <script src="js/utility.js"></script>
+    <script src="js/calculate-expanses.js"></script>
+    <script src="js/calculate-savings.js"></script>
 </body>
 </html>
